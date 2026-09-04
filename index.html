@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development Solutions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Navigation Bar ===== -->
+  <header class="navbar">
+    <a href="#home" class="nav-brand"><img src="assets/logo.43.png" alt="Web Development Solutions" class="nav-logo"></a>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav id="siteNav" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Hero Banner (futuristic 3D scene) ===== -->
+  <main id="home" class="hero">
+    <!-- Background: gradient glow orbs, perspective grid floor, scanline -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-glow hero-glow-a"></div>
+      <div class="hero-glow hero-glow-b"></div>
+      <div class="hero-glow hero-glow-c"></div>
+      <div class="hero-grid-floor"></div>
+      <div class="hero-scanline"></div>
+    </div>
+
+    <!-- Particle field: drifting dots + glowing sparks -->
+    <div class="hero-particles" aria-hidden="true">
+      <div class="particle-layer layer-far"></div>
+      <div class="particle-layer layer-near"></div>
+      <span class="spark spark-1"></span>
+      <span class="spark spark-cyan spark-2"></span>
+      <span class="spark spark-3"></span>
+      <span class="spark spark-cyan spark-4"></span>
+      <span class="spark spark-5"></span>
+    </div>
+
+    <div class="hero-inner">
+      <!-- Copy -->
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Web Development Solutions</p>
+        <h1 class="hero-title">We Build <span class="grad-text">Futuristic</span> Web Experiences</h1>
+        <p class="hero-sub">Design, engineering and growth under one roof — blazing-fast websites and web apps with immersive 3D interfaces that move your metrics.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="hero-btn hero-btn-primary">Get Free Consultation</a>
+          <a href="#services" class="hero-btn hero-btn-secondary">Explore Solutions</a>
+        </div>
+        <ul class="hero-stats">
+          <li><strong>120+</strong><span>Projects shipped</span></li>
+          <li><strong>99.9%</strong><span>Uptime SLA</span></li>
+          <li><strong>4.9&#9733;</strong><span>Client rating</span></li>
+        </ul>
+      </div>
+
+      <!-- 3D scene: orbit rings, data panels, glowing laptop, floating shapes -->
+      <div class="hero-scene" aria-hidden="true">
+        <!-- Orbit rings with traveling glow dots -->
+        <div class="orbit-plane orbit-plane-1">
+          <div class="orbit-ring"></div>
+          <div class="orbit-spinner"><span class="orbit-dot"></span></div>
+        </div>
+        <div class="orbit-plane orbit-plane-2">
+          <div class="orbit-ring"></div>
+          <div class="orbit-spinner"><span class="orbit-dot"></span></div>
+        </div>
+
+        <!-- Gradient data panels -->
+        <div class="panel panel-analytics">
+          <div class="panel-head">
+            <span class="pdot pdot-r"></span><span class="pdot pdot-y"></span><span class="pdot pdot-g"></span>
+            <span class="panel-title">Live Analytics</span>
+          </div>
+          <div class="panel-kpis">
+            <span><b>24.8k</b> Visitors</span>
+            <span><b>+38%</b> Conv.</span>
+          </div>
+          <div class="bars">
+            <i style="--h:42%"></i><i style="--h:68%"></i><i style="--h:50%"></i><i style="--h:82%"></i>
+            <i style="--h:58%"></i><i style="--h:90%"></i><i style="--h:64%"></i><i style="--h:78%"></i>
+          </div>
+        </div>
+
+        <div class="panel panel-code">
+          <div class="panel-head">
+            <span class="pdot pdot-r"></span><span class="pdot pdot-y"></span><span class="pdot pdot-g"></span>
+            <span class="panel-title">build.js</span>
+          </div>
+          <div class="code-lines">
+            <div class="cl"><span class="tok-purple">const</span> <span class="tok-blue">stack</span> <span class="tok-gray">=</span> <span class="tok-pink">[</span><span class="tok-green">'react'</span><span class="tok-gray">,</span> <span class="tok-green">'next'</span><span class="tok-pink">]</span><span class="tok-gray">;</span></div>
+            <div class="cl"><span class="tok-purple">function</span> <span class="tok-blue">deploy</span><span class="tok-pink">()</span> <span class="tok-pink">{</span></div>
+            <div class="cl indent"><span class="tok-purple">return</span> <span class="tok-orange">ship</span><span class="tok-pink">(</span><span class="tok-blue">stack</span><span class="tok-pink">)</span><span class="tok-gray">;</span></div>
+            <div class="cl"><span class="tok-pink">}</span></div>
+            <div class="cl"><span class="tok-gray">// deploy to the edge</span></div>
+            <div class="cl"><span class="tok-blue">deploy</span><span class="tok-pink">()</span><span class="tok-gray">;</span><span class="caret"></span></div>
+          </div>
+        </div>
+        <div class="panel panel-growth">
+          <svg class="sparkline" viewBox="0 0 120 44" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="sparkStroke" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#a78bfa"/>
+              </linearGradient>
+            </defs>
+            <polyline class="spark-line" points="2,36 18,30 34,33 50,22 66,26 82,14 98,18 118,6" fill="none" stroke="url(#sparkStroke)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="growth-kpi"><b>+128%</b><span>Conversion</span></div>
+        </div>
+
+        <!-- Glowing 3D laptop -->
+        <div class="laptop">
+          <div class="laptop-ghost"></div>
+          <div class="laptop-screen">
+            <div class="ls-head">
+              <span class="ls-dot"></span><span class="ls-dot"></span><span class="ls-dot"></span>
+              <span class="ls-url">webdevsolutions.com</span>
+            </div>
+            <div class="ls-body">
+              <div class="ls-side"><i></i><i></i><i></i><i></i></div>
+              <div class="ls-main">
+                <div class="ls-hero"><span class="ls-pill"></span><span class="ls-lines"><i></i><i class="short"></i></span></div>
+                <div class="ls-cards"><i></i><i></i><i></i></div>
+                <div class="ls-chart"><i style="--h:50%"></i><i style="--h:75%"></i><i style="--h:40%"></i><i style="--h:88%"></i><i style="--h:62%"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="laptop-base"></div>
+          <div class="laptop-shadow"></div>
+        </div>
+        <!-- Floating geometric shapes -->
+        <div class="cube-wrap">
+          <div class="cube-tilt">
+            <div class="cube">
+              <i class="cf cf-front"></i><i class="cf cf-back"></i><i class="cf cf-right"></i>
+              <i class="cf cf-left"></i><i class="cf cf-top"></i><i class="cf cf-bottom"></i>
+            </div>
+          </div>
+        </div>
+        <svg class="ring-svg" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="44" fill="none" stroke="rgba(167,139,250,0.85)" stroke-width="2.5" stroke-dasharray="34 14 12 14" stroke-linecap="round"/>
+        </svg>
+        <div class="shape sphere"></div>
+        <div class="shape pyramid pyr-1"></div>
+        <div class="shape pyramid pyr-2"></div>
+        <div class="shape shard shard-1"></div>
+        <div class="shape shard shard-2"></div>
+
+        <!-- Motion blur streaks & comets (clipped layer) -->
+        <div class="streak-layer">
+          <span class="streak s-1"></span>
+          <span class="streak s-2"></span>
+          <span class="streak s-3"></span>
+          <span class="streak s-4"></span>
+          <span class="comet comet-1"></span>
+          <span class="comet comet-2"></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Services ===== -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">End-to-end web development services to design, build and grow your digital product.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card">
+          <div class="card-icon">💻</div>
+          <h3>Custom Web Development</h3>
+          <p>Tailor-made websites and web applications built with modern, scalable technologies.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p>Clean, user-focused interfaces designed to convert visitors into customers.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">⚙️</div>
+          <h3>Backend &amp; APIs</h3>
+          <p>Robust server-side architecture, REST &amp; GraphQL APIs and secure databases.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🛒</div>
+          <h3>E-commerce Solutions</h3>
+          <p>High-converting online stores with payments, inventory and analytics built in.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📱</div>
+          <h3>Responsive &amp; PWA</h3>
+          <p>Fast, mobile-first experiences that work flawlessly on every device.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🛠️</div>
+          <h3>Maintenance &amp; Support</h3>
+          <p>Ongoing updates, monitoring and support to keep your product healthy.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Industries ===== -->
+  <section id="industries" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Industries We Serve</h2>
+        <p class="section-subtitle">Domain-specific solutions tailored to the unique needs of your industry.</p>
+      </div>
+      <div class="chip-grid">
+        <div class="chip"><span class="chip-icon">🏥</span> Healthcare</div>
+        <div class="chip"><span class="chip-icon">💰</span> Finance &amp; Fintech</div>
+        <div class="chip"><span class="chip-icon">🛍️</span> E-commerce &amp; Retail</div>
+        <div class="chip"><span class="chip-icon">🎓</span> Education</div>
+        <div class="chip"><span class="chip-icon">🏠</span> Real Estate</div>
+        <div class="chip"><span class="chip-icon">✈️</span> Travel &amp; Hospitality</div>
+        <div class="chip"><span class="chip-icon">🚚</span> Logistics</div>
+        <div class="chip"><span class="chip-icon">🚀</span> SaaS &amp; Startups</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Us ===== -->
+  <section id="why-us" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Why Choose Us</h2>
+        <p class="section-subtitle">We combine engineering excellence with business thinking to deliver real results.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Fast Delivery</h3>
+          <p>Agile sprints and clear milestones mean your project ships on time, every time.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🔒</div>
+          <h3>Secure &amp; Reliable</h3>
+          <p>Security-first development with tested, production-ready code you can trust.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">👥</div>
+          <h3>Expert Team</h3>
+          <p>Senior developers, designers and project managers with years of experience.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">💬</div>
+          <h3>Clear Communication</h3>
+          <p>Weekly demos, honest estimates and direct access to the people building your product.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">💰</div>
+          <h3>Transparent Pricing</h3>
+          <p>No hidden costs — clear quotes and flexible engagement models that fit your budget.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🛟</div>
+          <h3>24/7 Support</h3>
+          <p>Round-the-clock support and monitoring long after your launch day.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Portfolio ===== -->
+  <section id="portfolio" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Our Portfolio</h2>
+        <p class="section-subtitle">A selection of projects we are proud of.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card project">
+          <div class="project-thumb thumb-1"></div>
+          <h3>FinPay Dashboard</h3>
+          <p>Fintech SaaS dashboard with real-time analytics and reporting.</p>
+          <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span></div>
+        </article>
+        <article class="card project">
+          <div class="project-thumb thumb-2"></div>
+          <h3>ShopEase</h3>
+          <p>E-commerce platform with seamless checkout and inventory tools.</p>
+          <div class="tags"><span class="tag">Next.js</span><span class="tag">Stripe</span></div>
+        </article>
+        <article class="card project">
+          <div class="project-thumb thumb-3"></div>
+          <h3>MediBook</h3>
+          <p>Healthcare appointment booking system for clinics and patients.</p>
+          <div class="tags"><span class="tag">Vue</span><span class="tag">Laravel</span></div>
+        </article>
+        <article class="card project">
+          <div class="project-thumb thumb-4"></div>
+          <h3>EduLearn LMS</h3>
+          <p>E-learning platform with courses, quizzes and certificates.</p>
+          <div class="tags"><span class="tag">React</span><span class="tag">Django</span></div>
+        </article>
+        <article class="card project">
+          <div class="project-thumb thumb-5"></div>
+          <h3>Stayo</h3>
+          <p>Travel booking website with search, reviews and secure payments.</p>
+          <div class="tags"><span class="tag">Angular</span><span class="tag">Firebase</span></div>
+        </article>
+        <article class="card project">
+          <div class="project-thumb thumb-6"></div>
+          <h3>FleetTrack</h3>
+          <p>Logistics portal for live fleet tracking and route optimisation.</p>
+          <div class="tags"><span class="tag">React</span><span class="tag">PostgreSQL</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Resources ===== -->
+  <section id="resources" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Resources</h2>
+        <p class="section-subtitle">Free knowledge to help you plan, build and grow your web product.</p>
+      </div>
+      <div class="grid grid-4">
+        <article class="card">
+          <div class="card-icon">📝</div>
+          <h3>Blog</h3>
+          <p>Insights, tutorials and the latest industry trends.</p>
+          <a class="resource-link" href="#resources">Read the blog →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">📚</div>
+          <h3>Guides &amp; E-books</h3>
+          <p>Practical, downloadable guides for every stage.</p>
+          <a class="resource-link" href="#resources">Download now →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">🎥</div>
+          <h3>Webinars</h3>
+          <p>Live sessions and on-demand recordings from experts.</p>
+          <a class="resource-link" href="#resources">Watch now →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">📄</div>
+          <h3>Case Studies</h3>
+          <p>Real projects, real results — see how we did it.</p>
+          <a class="resource-link" href="#resources">View studies →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know before getting started.</p>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>How long does it take to build a website?</summary>
+          <p>Most projects take between 2 and 12 weeks depending on scope and complexity. After a short discovery call we provide a detailed timeline with clear milestones.</p>
+        </details>
+        <details>
+          <summary>How much will my project cost?</summary>
+          <p>Costs depend on features, design and integrations. We offer fixed quotes after understanding your requirements — no hidden fees, ever.</p>
+        </details>
+        <details>
+          <summary>Do you provide post-launch support?</summary>
+          <p>Yes. Every project includes a free support window, and we offer flexible maintenance plans covering updates, monitoring and improvements.</p>
+        </details>
+        <details>
+          <summary>Can you redesign my existing website?</summary>
+          <p>Absolutely. We start with a free audit of your current site, then improve design, speed, SEO and conversions without losing your existing content.</p>
+        </details>
+        <details>
+          <summary>Which technologies do you work with?</summary>
+          <p>We work with React, Next.js, Vue, Angular, Node.js, Laravel, Django, WordPress and more — always choosing the best fit for your goals.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Tell us about your project — we usually reply within one business day.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <h3>Email</h3>
+              <p>tech@kaalamithra-ai.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <h3>Phone</h3>
+              <p>+91 8884014055</p>
+              <p>+91 9972770266</p>
+              <p>+91 6361842299</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <h3>Office</h3>
+              <p>84MM+CJ8, Road, Devaraya Pattana, Tumakur, Karnataka 572104</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form">
+          <div class="form-row">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What is this about?">
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>© 2026 Web Development Solutions. All rights reserved.</p>
+  </footer>
+
+  <!-- ===== Floating Contact Buttons (WhatsApp / Call) ===== -->
+  <div class="floating-contact">
+    <a href="https://wa.me/15551234567" target="_blank" rel="noopener" class="fab fab-whatsapp" aria-label="Chat with us on WhatsApp">
+      <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+    </a>
+    <a href="tel:+15551234567" class="fab fab-call" aria-label="Call us">
+      <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></svg>
+    </a>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
